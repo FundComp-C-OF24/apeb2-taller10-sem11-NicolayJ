@@ -1,0 +1,87 @@
+1. Algoritmo ParesImpares_01
+2.	Inicio
+3.	Funcion principal()	
+4.		Definicion
+			matrizA, matrizB, matrizC, valorfil=3, valorcolum=3 Como Entero [0,n]
+			prom Como Real [0.0, n]
+			Dimension matrizA[valorfil, valorcolum] Como Entero [0,n]
+			Dimension matrizB[valorfil, valorcolum]	Como Entero [0,n]
+			Dimension matrizC[valorfil, valorcolum] Como Entero [0,n]
+
+5.		llenarMatriz(matrizA, valorfil, valorcolum)
+6		<< "Matriz Generada: "
+7		presentarMatriz(MatrizA, valor, fil, valorcolum)
+8		<<"--------------------------------"
+9		<<"Los pares de la matriz son: "
+10		llenarPares(matrizA, matrizB, valorfil, valorcolum)
+11		presentarMatriz(matrizB, valorfil, valorcolum)
+
+12		<< "Los impares de la matriz son:"
+13		llenarImpares(matrizA, matrizC, valorfil, valorcolum)
+14		presentarMatriz(matrizC, valorfil, valorcolum)
+
+15		presentarPromedio(matrizA, valorfil, valorcolum, promedio)
+16		<< "El promedio de los valores de la matriz es: ", promedio
+17	Fin funcion principal
+18.FinAlgoritmo
+
+1.Procedimiento llenarMatriz(matrizA i(0,n), valorfil i(0,n), valorcolum i(0,n)):i
+2.	Para(i=0; i<valorfil ; i=i+1)
+3.		Para(j=0; j<valorcolum; j=j+1)
+4.			matrizA[i][j]= Aleatorio(1,100)
+5.		FinPara
+6.	FinPara
+7.FinProcedimiento
+
+1.Funcion presentarMatriz(matrizA  i(0,n), valorfil i(0,n), valorcolum i(0,n)):i
+2.	Definicion
+		matrizA Como Entero
+3.	Para(i=0; i<valorfil ; i=i+1)
+4.		Para(j=0; j<valorcolum; j=j+1)
+5.			<< matriz[i][j], " | " Sin Saltar
+6.		FinPara
+7.	FinPara
+8.	Devolver matrizA
+9.FinFuncion
+
+1. Funcion llenarPares(matrizA  i(0,n), valorfil i(0,n), valorcolum i(0,n)):i
+2.	Definicion
+		matrizB Como Entero 
+3	Para(i=0; i<valorfil ; i=i+1)
+4.		Para(j=0; j<valorcolum; j=j+1)
+5.			Si(matrizA[i][j] MOD 2) == 0 
+6.				matrizB[i][j] = MatrizA[i][j]
+7.			Sino
+8.				matrizB[i][j] = 0
+9.			FinSi
+10.		FinPara
+11.	FinPara
+12.	Devolver matrizC
+13.FinFuncion
+
+1. Funcion llenarImpares(matrizA  i(0,n), valorfil i(0,n), valorcolum i(0,n)):i
+2.	Definicion
+		matrizC Como Entero 
+3	Para(i=0; i<valorfil ; i=i+1)
+4.		Para(j=0; j<valorcolum; j=j+1)
+5.			Si(matrizA[i][j] MOD 2) <> 0 
+6.				matrizC[i][j] = MatrizA[i][j]
+7.			Sino
+8.				matrizC[i][j] = 0
+9.			FinSi
+10.		FinPara
+11.	FinPara
+12.	Devolver matrizC
+13.FinFuncion
+
+1.Funcion presentarPromedio(matrizA i(0,n), valorfil i(0,n), valorcolum i(0,n), promedio Por Referencia):i
+2.	Definir
+3.		sum Como Entero [0,n]
+4.	Para(i=0; i<valorfil ; i=i+1)
+5.		Para(j=0; j<valorcolum; j=j+1)
+6.			sum = sum + matrizA[i][j]
+7.		FinPara
+8.	FinPara
+9.	promedio = sum / (valorfil * valorcolum)
+10.	devolver promedio
+11.FinFuncion 

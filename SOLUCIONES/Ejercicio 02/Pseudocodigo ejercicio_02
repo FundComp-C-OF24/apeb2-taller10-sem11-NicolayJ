@@ -1,0 +1,50 @@
+1. Algoritmo AreasDeFiguras
+2.	Inicio
+3.	Funcion principal()	
+4.		Definicion
+			opcNum Como Entero [0,n]
+			lado, baseTri, alturaTri, baseRec, alturaRec, areaTotal=0 Como Real [0.0,n]
+5.		<< "Escoga la opcion a calcular: "
+6.		<< "1. Area de un Cuadrado"
+7.		<< "2. Area de un Triangulo"
+8.		<< "3. Area de un Rectangulo"
+9.		>> opcNum
+10.		<< "-------------------------------"
+11.		Si (opcNum == 1)
+12.			<< "Ingrese el lado del cuadrado: "
+13.			>> lado
+14.			areaTotal = areaCuadrado(lado)
+15.			<< "El area del cuadrado es: ", areaTotal
+16.		Sino 
+17.			Si (opcNum == 2)
+18.			<< "Ingrese la base del triangulo: "
+19.			>> baseTri
+20.			areaTotal<-areaTriangulo(baseTri, alturaTri)
+21.			<< "El area del triangulo es: ", areaTotal
+22.		SiNo
+23.			Si(opcNum ==3)
+24.				<< "Ingrese la base del rectangulo: "
+25.				Leer baseRec
+26.				<< "Ingrese la altura del rectangulo: "
+27.				Leer alturaRec
+28.				areaTotal<-areaRectangulo(baseRec, alturaRec)
+29.				<< "El area del rectangulo es: ", areaTotal
+30.			SiNo
+31.				<< "El rango de opciones es de 1 al 3 ingrese nuevamente"
+32.			FinSi
+33.		FinSi
+34.	FinSi
+35.	Fin funcion principal
+36.FinAlgoritmo
+
+1.Procedimiento areaCuadrado(lado d(0,n)):d
+2.	areaTotal = lado * lado
+3.FinProcedimiento
+
+1.Procedimiento areaTriangulo(baseTri d(0,n), alturaTri d(0,n)):d
+2.	areaTotal = (baseTri * alturaTri)/2
+3.FinProcedimiento
+
+1.Procedimiento areaRectangulo(baseRec d(0,n), alturaRec d(0,n)):d
+2.	areaTotal = baseRec * alturaRec
+3.FinProcedimiento

@@ -1,0 +1,42 @@
+1. Algoritmo PlanillaLuz_PredioInmueble
+2.	Inicio
+3.	Funcion principal()	
+4.		Definicion
+			valorKW, numKW, valorInmueb, valorPlanilla=0, predio=0 Como Real [0.0,n]
+			cedula, nombCliComo Cadena [A-Z, ,a-z]
+5.		<< "Ingrese el nombre del usuario: "
+6.		>> nombCli
+7.		<< "Ingrese la cedula del cliente: "
+8.		>> cedula
+9.		<< "Ingrese la opcion que desea saber: "
+10.		<< "1. Planilla de luz"
+11.		<< "2. Predio de un bien inmueble"
+12.		>> opc
+13.		<< "-----------------------------------"
+14.		Si (opc == 1 )
+15.			<< "Ingresar el valor del Kilovatio: "
+16.			>> valorKW
+17.			<< "Ingrese el numero de Kilovatios gastados al mes: "
+18.			>> numKV
+19.			valorPlanilla<-planillaLuz(valorKW, numKV)
+20.			<< "Reporte"
+21.			<< "Cliente ", nombCli, " con cedula ", cedula, " debe pagar el valor de $", 	valorPlanilla
+22.		SiNo
+23.			Si (opc == 2)
+24.				<< "Ingresar el valor del Inmueble: "
+25.				>> valorInmueb
+26.				predio<-calcPredio(valorInmueb)
+27.				<< "Reporte"
+28.				<< "Cliente ", nombCli, " con cedula ", cedula, " tiene un inmueble valorado en $", valorInmueb," y tiene que pagar de predio $", predio
+29.			FinSi
+30.		FinSi
+31.	Fin funcion principal
+32.FinAlgoritmo
+
+1.Procedimiento planillaLuz(valorKW d(0.0,n),numKV d(0.0,n), valorPlanilla d(0.0,n)):d
+2.	valorPlanilla = valorKW * numKV
+3.FinProcedimiento
+
+1.Procedimiento calcPredio(valorInmueb d(0.0,n), predio d(0.0,n)):d
+2.	predio = valorInmueb * 0.02
+3.FinProcedimiento

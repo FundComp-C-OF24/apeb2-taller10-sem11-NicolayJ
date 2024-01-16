@@ -1,0 +1,67 @@
+1. Algoritmo OperacionesMatrz
+2.	Inicio
+3.	Funcion principal()	
+4.		Definicion
+			valorfil, valor, suma, resta, multiplicacion Como Entero [0,n]
+5.		<< "Ingrese la cantidad de filas y columnas de la matriz cuadrada:"
+6.    	>> valorfil
+7.		>> valorcolum
+8.    	Dimension matrizA[valorfil, valorcolum] Como Entero [0,n] 
+9.    	llenarMatriz(matrizA, valorfil, valorcolum)
+10.    	<< "Matriz Generada:"
+11.    	presentarMatriz(matrizA, valorfil, valorcolum)
+12.    	<< "La suma de los elementos de la matriz es:", suma
+13.    	<< "La resta de los elementos de la matriz es:", resta
+14.	    << "La multiplicación de los elementos de la matriz es:", multiplicacion
+15.	Fin funcion principal
+16.FinAlgoritmo
+
+1.Procedimiento llenarMatriz(matriz i(0,n), valorFil i(0,n), valorcolum i(0,n)):i
+2.	Para(i=0; i<valorfil; i=i+1)
+3.		Para(j=0; j<valorcolum; j=j+1)
+4.			matriz[i][j] = Aleatorio(1,9)
+5.		FinPara
+6.	FinPara
+7.FinProcedimiento
+
+1.Procedimiento presentarMatriz(matriz i(0,n), valorFil i(0,n), valorcolum i(0,n)):i
+2.	Para(i=0; i<valorfil; i=i+1)
+3.		Para(j=0; j<valorcolum; j=j+1)
+4.			<< matriz[i][j], " | " Sin Saltar
+5.		FinPara
+6.		<< " "
+7.	FinPara
+8.FinProcedimiento
+
+1.Funcion sumaMatriz(matriz i(0,n), valorFil i(0,n), valorcolum i(0,n)):i
+2.	Definir suma=0 Como Entero
+3.	Para(i=0; i<valorfil; i=i+1)
+4.		Para(j=0; j<valorcolum; j=j+1)
+5.			suma = suma + matriz[i][j]
+6.		FinPara
+7.	FinPara
+8.FinFuncion
+
+1.Funcion restarMatriz(matriz i(0,n), valorFil i(0,n), valorcolum i(0,n)):i
+2.	Definir resta Como Entero
+3.	Para(i=0; i<valorfil; i=i+1)
+4.		Para(j=0; j<valorcolum; j=j+1)
+5.			Si(i=0 y j=0)
+6.				resta= matriz[i][j]
+7.			Sino
+8.				resta = resta - matriz[i][j]
+9.			FinSi		
+10		FinPara
+11.	FinPara
+12. Devolver resta
+13.FinFuncion
+
+1.Funcion multiplicacionMatriz(matriz i(0,n), valorFil i(0,n), valorcolum i(0,n)):i
+2.	Definir multiplicacion=1 Como Entero
+3.	Para(i=0; i<valorfil; i=i+1)
+4.		Para(j=0; j<valorcolum; j=j+1)
+5.			multiplicacion = multiplicacion * matriz[i][j]
+6.		FinPara
+7.	FinPara
+8.	Devolver multiplicacion
+9.FinFuncion
